@@ -6,7 +6,6 @@ const techs = [
     "TailwindCSS",
     "Framer Motion",
     "Railway",
-    "Vercel",
     "GitHub",
 ];
 

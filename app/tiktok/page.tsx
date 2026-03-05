@@ -11,10 +11,10 @@
  * 1. Run `npm run build`
  * 2. Run `npm start` to test the production build locally.
  * 
- * HOW TO DEPLOY (VERCEL):
+ * HOW TO DEPLOY (RAILWAY):
  * 1. Push code to a GitHub repository.
- * 2. Go to https://vercel.com/new and import your GitHub repository.
- * 3. Keep framework preset to Next.js and click "Deploy".
+ * 2. Create/link a Railway project and service.
+ * 3. Run `railway up` from this folder.
  */
 
 "use client";

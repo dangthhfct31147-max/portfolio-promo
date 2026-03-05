@@ -3,13 +3,11 @@
 import { motion } from "framer-motion";
 import { Activity, CreditCard, LayoutDashboard, ShieldCheck } from "lucide-react";
 
+const listIcons = [CreditCard, ShieldCheck];
+
 export function FloatingMockup() {
     return (
-        <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-full max-w-[260px] h-[360px] p-1.5 rounded-[2.5rem] bg-accent/30 border border-white/10 glass shadow-2xl mx-auto mt-6 overflow-hidden"
-        >
+        <div className="relative w-full max-w-[260px] h-[360px] p-1.5 rounded-[2.5rem] bg-accent/30 border border-white/10 glass shadow-2xl mx-auto mt-6 overflow-hidden float-y gpu-accelerated">
             {/* Dynamic Island */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-20" />
 
@@ -41,7 +39,7 @@ export function FloatingMockup() {
 
                 {/* Fake List Items */}
                 <div className="flex flex-col gap-2 mt-2">
-                    {[CreditCard, ShieldCheck].map((Icon, i) => (
+                    {listIcons.map((Icon, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, x: -10 }}
@@ -62,6 +60,6 @@ export function FloatingMockup() {
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }

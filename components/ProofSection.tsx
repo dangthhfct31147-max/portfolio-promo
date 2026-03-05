@@ -3,36 +3,36 @@
 import { motion } from "framer-motion";
 import { Zap, ShieldCheck, Github } from "lucide-react";
 
-export function ProofSection() {
-    const cards = [
-        {
-            title: "Speed",
-            description: "Fast turnaround without compromising quality. Shipping MVPs in days, not months.",
-            icon: Zap,
-            color: "text-yellow-400",
-            bg: "bg-yellow-400/10",
-            border: "border-yellow-400/20",
-        },
-        {
-            title: "Quality",
-            description: "Clean, production-ready code with modern tech stacks. Built to scale.",
-            icon: ShieldCheck,
-            color: "text-primary",
-            bg: "bg-primary/10",
-            border: "border-primary/20",
-        },
-        {
-            title: "Ownership",
-            description: "Full GitHub transfer upon completion. No lock-in, 100% your IP.",
-            icon: Github,
-            color: "text-purple-400",
-            bg: "bg-purple-400/10",
-            border: "border-purple-400/20",
-        }
-    ];
+const cards = [
+    {
+        title: "Speed",
+        description: "Fast turnaround without compromising quality. Shipping MVPs in days, not months.",
+        icon: Zap,
+        color: "text-yellow-400",
+        bg: "bg-yellow-400/10",
+        border: "border-yellow-400/20",
+    },
+    {
+        title: "Quality",
+        description: "Clean, production-ready code with modern tech stacks. Built to scale.",
+        icon: ShieldCheck,
+        color: "text-primary",
+        bg: "bg-primary/10",
+        border: "border-primary/20",
+    },
+    {
+        title: "Ownership",
+        description: "Full GitHub transfer upon completion. No lock-in, 100% your IP.",
+        icon: Github,
+        color: "text-purple-400",
+        bg: "bg-purple-400/10",
+        border: "border-purple-400/20",
+    },
+];
 
+export function ProofSection() {
     return (
-        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative">
+        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative cv-auto">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

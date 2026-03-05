@@ -5,7 +5,7 @@ import { FloatingMockup } from "./FloatingMockup";
 
 export function HeroSection() {
     return (
-        <section className="min-h-screen relative flex flex-col items-center justify-center pt-16 pb-12 px-6 snap-start snap-always overflow-hidden w-full max-w-sm mx-auto">
+        <section className="min-h-screen relative flex flex-col items-center justify-center pt-16 pb-12 px-6 snap-start snap-always overflow-hidden w-full max-w-sm mx-auto cv-auto">
             <motion.div
                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
@@ -43,11 +43,7 @@ export function HeroSection() {
                 className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-[10px] uppercase tracking-widest font-bold"
             >
                 <span>Scroll</span>
-                <motion.div
-                    animate={{ y: [0, 6, 0], opacity: [0.3, 1, 0.3] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-0.5 h-6 rounded-full bg-gradient-to-b from-primary to-transparent"
-                />
+                <div className="w-0.5 h-6 rounded-full bg-gradient-to-b from-primary to-transparent scroll-pulse gpu-accelerated" />
             </motion.div>
         </section>
     );

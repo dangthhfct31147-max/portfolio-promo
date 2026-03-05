@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export function BackgroundEffects() {
     return (
         <>
@@ -9,34 +7,8 @@ export function BackgroundEffects() {
 
             {/* Animated Gradient Orbs */}
             <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-                <motion.div
-                    animate={{
-                        scale: [1, 1.2, 1],
-                        x: [0, 50, 0],
-                        y: [0, -50, 0],
-                        opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                    className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/20 blur-[120px]"
-                />
-                <motion.div
-                    animate={{
-                        scale: [1, 1.5, 1],
-                        x: [0, -50, 0],
-                        y: [0, 50, 0],
-                        opacity: [0.2, 0.4, 0.2],
-                    }}
-                    transition={{
-                        duration: 12,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                    className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-purple-600/20 blur-[120px]"
-                />
+                <div className="orb orb-a absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/20 blur-[120px] gpu-accelerated" />
+                <div className="orb orb-b absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-purple-600/20 blur-[120px] gpu-accelerated" />
             </div>
 
             {/* Subtle Noise Overlay */}

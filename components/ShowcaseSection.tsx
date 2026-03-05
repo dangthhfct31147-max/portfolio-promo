@@ -3,30 +3,30 @@
 import { motion } from "framer-motion";
 import { Link2 } from "lucide-react";
 
-export function ShowcaseSection() {
-    const projects = [
-        {
-            name: "SaaS Analytics",
-            tags: ["Dashboard", "Next.js"],
-            imgDesc: "A sleek dark-mode analytics dashboard",
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            name: "E-Commerce App",
-            tags: ["Payments", "Auth"],
-            imgDesc: "A conversion-optimized shopping layout",
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            name: "AI Tool UI",
-            tags: ["Animation", "OpenAI"],
-            imgDesc: "Interactive chat interface with micro-interactions",
-            color: "from-green-400 to-emerald-600"
-        }
-    ];
+const projects = [
+    {
+        name: "SaaS Analytics",
+        tags: ["Dashboard", "Next.js"],
+        imgDesc: "A sleek dark-mode analytics dashboard",
+        color: "from-blue-500 to-cyan-500",
+    },
+    {
+        name: "E-Commerce App",
+        tags: ["Payments", "Auth"],
+        imgDesc: "A conversion-optimized shopping layout",
+        color: "from-purple-500 to-pink-500",
+    },
+    {
+        name: "AI Tool UI",
+        tags: ["Animation", "OpenAI"],
+        imgDesc: "Interactive chat interface with micro-interactions",
+        color: "from-green-400 to-emerald-600",
+    },
+];
 
+export function ShowcaseSection() {
     return (
-        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative">
+        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative cv-auto">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

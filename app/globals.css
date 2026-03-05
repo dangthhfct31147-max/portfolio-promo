@@ -41,6 +41,61 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes marquee-x {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes scroll-pulse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate3d(0, 6px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes orb-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate3d(50px, -50px, 0) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes orb-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate3d(-50px, 50px, 0) scale(1.5);
+    opacity: 0.4;
+  }
+}
+
 /* Custom Utilities for Premium Vibe */
 @layer utilities {
   .text-gradient {
@@ -63,5 +118,40 @@ body {
   .no-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  .gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 100dvh;
+  }
+
+  .marquee-track {
+    animation: marquee-x 20s linear infinite;
+  }
+
+  .float-y {
+    animation: float-y 4s ease-in-out infinite;
+  }
+
+  .scroll-pulse {
+    animation: scroll-pulse 1.5s ease-in-out infinite;
+  }
+
+  .orb {
+    will-change: transform, opacity;
+  }
+
+  .orb-a {
+    animation: orb-a 8s ease-in-out infinite;
+  }
+
+  .orb-b {
+    animation: orb-b 12s ease-in-out infinite;
   }
 }

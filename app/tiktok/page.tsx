@@ -19,7 +19,7 @@
 
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
 import { HeroSection } from "@/components/HeroSection";
 import { TechBadgeRow } from "@/components/TechBadgeRow";
@@ -32,6 +32,23 @@ import { Play, Pause } from "lucide-react";
 export default function TiktokLayout() {
     const [isPlaying, setIsPlaying] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
+    const sectionContent = useMemo(
+        () => (
+            <>
+                <HeroSection />
+
+                <div className="snap-start snap-always w-full flex items-center justify-center min-h-[30vh] py-10 relative z-20 cv-auto">
+                    <TechBadgeRow />
+                </div>
+
+                <ProofSection />
+                <ServicesSection />
+                <ShowcaseSection />
+                <CtaSection />
+            </>
+        ),
+        [],
+    );
 
     // Auto-scroll "Timed Progression" logic for screen recording
     useEffect(() => {
@@ -71,16 +88,7 @@ export default function TiktokLayout() {
                 ref={scrollRef}
                 className={`w-full h-full overflow-y-auto overflow-x-hidden relative z-10 no-scrollbar scroll-smooth ${isPlaying ? '' : 'snap-y snap-mandatory'}`}
             >
-                <HeroSection />
-
-                <div className="snap-start snap-always w-full flex items-center justify-center min-h-[30vh] py-10 relative z-20">
-                    <TechBadgeRow />
-                </div>
-
-                <ProofSection />
-                <ServicesSection />
-                <ShowcaseSection />
-                <CtaSection />
+                {sectionContent}
             </div>
         </main>
     );

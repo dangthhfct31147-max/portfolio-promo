@@ -3,30 +3,30 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, ChevronRight } from "lucide-react";
 
-export function ServicesSection() {
-    const services = [
-        {
-            title: "Landing Page",
-            price: "From $199",
-            features: ["High-converting UI", "Animations", "Mobile First"],
-            popular: false,
-        },
-        {
-            title: "Full-Stack MVP",
-            price: "From $899",
-            features: ["Auth & Database", "Payment Integration", "Admin Dashboard"],
-            popular: true,
-        },
-        {
-            title: "Business Website",
-            price: "From $399",
-            features: ["CMS setup", "SEO Optimized", "Multi-page"],
-            popular: false,
-        }
-    ];
+const services = [
+    {
+        title: "Landing Page",
+        price: "From $199",
+        features: ["High-converting UI", "Animations", "Mobile First"],
+        popular: false,
+    },
+    {
+        title: "Full-Stack MVP",
+        price: "From $899",
+        features: ["Auth & Database", "Payment Integration", "Admin Dashboard"],
+        popular: true,
+    },
+    {
+        title: "Business Website",
+        price: "From $399",
+        features: ["CMS setup", "SEO Optimized", "Multi-page"],
+        popular: false,
+    },
+];
 
+export function ServicesSection() {
     return (
-        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative">
+        <section className="min-h-screen py-24 px-6 flex flex-col justify-center snap-start snap-always max-w-sm mx-auto w-full relative cv-auto">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

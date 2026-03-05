@@ -5,7 +5,7 @@ import { Mail, Briefcase, ExternalLink, ArrowRight } from "lucide-react";
 
 export function CtaSection() {
     return (
-        <section className="min-h-screen py-24 px-6 flex flex-col items-center justify-center snap-start snap-always max-w-sm mx-auto w-full relative text-center">
+        <section className="min-h-screen py-24 px-6 flex flex-col items-center justify-center snap-start snap-always max-w-sm mx-auto w-full relative text-center cv-auto">
 
             {/* Background glow for CTA */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
